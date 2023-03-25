@@ -44,10 +44,11 @@ document.querySelector('.check').addEventListener('click', function () {
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
-  document.querySelector('.message').textContent = 'Start guessing . . .';
   document.querySelector('.guess').value = '';
+  document.querySelector('.message').textContent = 'Start guessing . . .';
+  document.querySelector('.title').textContent = 'Guess My Number !';
   document.querySelector('.number').textContent = '?';
   document.querySelector('body').style.backgroundColor = 'rgb(34, 31, 31)';
   document.querySelector('number').style.width = '150px';
-  document.querySelector('.title').textContent = 'Guess My Number !';
+  document.querySelector('.score').textContent = score;
 });
