@@ -59,3 +59,58 @@ body {
     text-align: center;
     padding: 20px;
 }
+/* Section 2 starts !!!!!! */
+.sec-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.left {
+    width: 200px;
+    margin-top: 460px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input {
+    margin-bottom: 40px;
+    height: 100px;
+    width: 250px;
+    text-align: center;
+    font-size: 50px;
+    border: 4px solid white;
+    border-radius: 8px;
+}
+.check {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    transition: 0.4 ease-in;
+    font-family: "Ubuntu", sans-serif;
+}
+.check:hover {
+    opacity: 0.8;
+}
+.right {
+    margin-top: 460px;
+    margin-right: 40px;
+}
+.message {
+    margin-bottom: 60px;
+}
+.label-score {
+    margin-bottom: 25px;
+}
+.message,
+.label-score,
+.label-highscore {
+    font-size: 30px;
+    letter-spacing: 6px;
+}
