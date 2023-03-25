@@ -50,5 +50,5 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.number').textContent = '?';
   document.querySelector('.score').textContent = score;
   document.querySelector('body').style.backgroundColor = 'rgb(34, 31, 31)';
-  document.querySelector('number').style.width = '150px';
+  document.querySelector('.number').style.width = '150px';
 });
