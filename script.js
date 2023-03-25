@@ -4,6 +4,8 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 
+// My first steps in javascript lets kick it !!!!
+
 // const displayMessage = function (message) {
 //   document.querySelector('.message').textContent = message;
 // };
@@ -15,10 +17,15 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     document.querySelector('.message').textContent = '⛔ No Number !';
   } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = '🤞❤ Correct number!';
+    document.querySelector('.message').textContent = '🎉🤞❤ Correct number!';
     document.querySelector('body').style.backgroundColor = 'Green';
     document.querySelector('.number').style.width = '200px';
     document.querySelector('.number').textContent = secretNumber;
+    document.querySelector('.title').textContent =
+      'Congratulations ! 🥳🍾 thanks for playing.';
+    document.querySelector('.description').textContent =
+      'The game was created by George Acharadze ';
+
     if (score > highscore) {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
@@ -34,4 +41,15 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
+});
+document.querySelector('.again').addEventListener('click', function () {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector('.message').textContent = 'Start guessing . . .';
+  document.querySelector('.guess').value = '';
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('body').style.backgroundColor = 'rgb(34, 31, 31)';
+  document.querySelector('number').style.width = '150px';
+  document.querySelector('.title').textContent = 'Guess My Number !';
+  document.querySelector('.description').textContent = '(Between 1 and 20)';
 });
