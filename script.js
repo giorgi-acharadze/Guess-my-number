@@ -23,6 +23,8 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('.title').textContent =
       'Congratulations ! 🥳🍾 thanks for playing.';
+    document.querySelector('.description').textContent =
+      'Created by George Acharadze';
 
     if (score > highscore) {
       highscore = score;
@@ -31,7 +33,7 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess !== secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent =
-        guess > secretNumber ? ' High !' : 'Low !';
+        guess > secretNumber ? ' High ! go down ⬇' : 'Low ! go up ⬆';
       score--;
       document.querySelector('.score').textContent = score;
     } else {
@@ -49,6 +51,7 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.title').textContent = 'Guess My Number !';
   document.querySelector('.number').textContent = '?';
   document.querySelector('.score').textContent = score;
+  document.querySelector('.description').textContent = '(Between 1 and 20)';
   document.querySelector('body').style.backgroundColor = 'rgb(34, 31, 31)';
   document.querySelector('.number').style.width = '150px';
 });
